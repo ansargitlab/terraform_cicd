@@ -5,17 +5,17 @@ on:
     branches:
       - main  # Trigger on push to main branch
 
-env:
-  TF_DIR: ./Day-2-all-config-file  # Global environment variable
+# env:
+#   TF_DIR: ./Day-2-all-config-file  # Global environment variable
 
 jobs:
   terraform:
     name: Terraform Workflow
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ${{ env.TF_DIR }}
+    # defaults:
+    #   run:
+    #     working-directory: ${{ env.TF_DIR }}
 
     steps:
       - name: Checkout code
